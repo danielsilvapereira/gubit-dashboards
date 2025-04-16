@@ -2134,7 +2134,6 @@
                 "kind": "AutoGridLayout",
                 "spec": {
                   "columnWidthMode": "standard",
-                  "fillScreen": true,
                   "items": [
                     {
                       "kind": "AutoGridLayoutItem",
