@@ -2131,23 +2131,23 @@
             "kind": "TabsLayoutTab",
             "spec": {
               "layout": {
-                "kind": "GridLayout",
+                "kind": "AutoGridLayout",
                 "spec": {
+                  "columnWidthMode": "standard",
+                  "fillScreen": true,
                   "items": [
                     {
-                      "kind": "GridLayoutItem",
+                      "kind": "AutoGridLayoutItem",
                       "spec": {
                         "element": {
                           "kind": "ElementReference",
                           "name": "panel-12"
-                        },
-                        "height": 9,
-                        "width": 24,
-                        "x": 0,
-                        "y": 0
+                        }
                       }
                     }
-                  ]
+                  ],
+                  "maxColumnCount": 2,
+                  "rowHeightMode": "standard"
                 }
               },
               "title": "DISCOS"
