@@ -479,7 +479,7 @@
                 "defaults": {
                   "color": {
                     "fixedColor": "#3dd67e",
-                    "mode": "fixed"
+                    "mode": "palette-classic"
                   },
                   "custom": {
                     "axisBorderShow": true,
@@ -506,7 +506,7 @@
                       "type": "linear"
                     },
                     "showPoints": "auto",
-                    "spanNulls": false,
+                    "spanNulls": true,
                     "stacking": {
                       "group": "A",
                       "mode": "none"
@@ -538,7 +538,9 @@
                   ],
                   "displayMode": "table",
                   "placement": "right",
-                  "showLegend": true
+                  "showLegend": true,
+                  "sortBy": "Last *",
+                  "sortDesc": true
                 },
                 "tooltip": {
                   "hideZeros": false,
