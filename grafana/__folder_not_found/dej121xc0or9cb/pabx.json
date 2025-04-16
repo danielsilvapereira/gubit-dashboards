@@ -221,19 +221,27 @@
                             "added": true,
                             "def": {
                               "category": "Alias",
-                              "defaultParams": [],
-                              "name": "setAlias",
+                              "defaultParams": [
+                                "/(.*)/",
+                                "$1"
+                              ],
+                              "name": "replaceAlias",
                               "params": [
                                 {
-                                  "name": "alias",
+                                  "name": "regexp",
+                                  "type": "string"
+                                },
+                                {
+                                  "name": "newAlias",
                                   "type": "string"
                                 }
                               ]
                             },
                             "params": [
-                              "CONSUMO DE MEMÓRIA"
+                              "/(.*): Memoria.*/",
+                              "$1"
                             ],
-                            "text": "setAlias()"
+                            "text": "replaceAlias(/(.*)/, $1)"
                           }
                         ],
                         "group": {
@@ -296,7 +304,7 @@
                 "defaults": {
                   "color": {
                     "fixedColor": "#3dd67e",
-                    "mode": "fixed"
+                    "mode": "palette-classic"
                   },
                   "custom": {
                     "axisBorderShow": true,
@@ -316,7 +324,7 @@
                       "viz": false
                     },
                     "insertNulls": false,
-                    "lineInterpolation": "linear",
+                    "lineInterpolation": "smooth",
                     "lineWidth": 2,
                     "pointSize": 5,
                     "scaleDistribution": {
@@ -348,14 +356,14 @@
               "options": {
                 "legend": {
                   "calcs": [
-                    "min",
-                    "mean",
                     "max",
                     "lastNotNull"
                   ],
                   "displayMode": "table",
-                  "placement": "bottom",
-                  "showLegend": true
+                  "placement": "right",
+                  "showLegend": true,
+                  "sortBy": "Last *",
+                  "sortDesc": true
                 },
                 "tooltip": {
                   "hideZeros": false,
