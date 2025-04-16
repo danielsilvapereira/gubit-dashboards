@@ -78,7 +78,7 @@
                         },
                         "options": {
                           "count": false,
-                          "disableDataAlignment": false,
+                          "disableDataAlignment": true,
                           "showDisabledItems": false,
                           "skipEmptyValues": false,
                           "useTrends": "default",
@@ -121,7 +121,7 @@
                 "defaults": {
                   "color": {
                     "fixedColor": "#3dd67e",
-                    "mode": "fixed"
+                    "mode": "palette-classic"
                   },
                   "custom": {
                     "axisBorderShow": true,
@@ -133,7 +133,7 @@
                     "barAlignment": 0,
                     "barWidthFactor": 0.6,
                     "drawStyle": "line",
-                    "fillOpacity": 60,
+                    "fillOpacity": 12,
                     "gradientMode": "opacity",
                     "hideFrom": {
                       "legend": false,
@@ -147,7 +147,7 @@
                     "scaleDistribution": {
                       "type": "linear"
                     },
-                    "showPoints": "auto",
+                    "showPoints": "never",
                     "spanNulls": false,
                     "stacking": {
                       "group": "A",
@@ -173,14 +173,14 @@
               "options": {
                 "legend": {
                   "calcs": [
-                    "min",
-                    "mean",
                     "max",
                     "lastNotNull"
                   ],
                   "displayMode": "table",
-                  "placement": "bottom",
-                  "showLegend": true
+                  "placement": "right",
+                  "showLegend": true,
+                  "sortBy": "Last *",
+                  "sortDesc": true
                 },
                 "tooltip": {
                   "hideZeros": false,
