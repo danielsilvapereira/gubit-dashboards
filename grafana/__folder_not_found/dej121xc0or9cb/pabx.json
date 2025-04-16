@@ -391,7 +391,34 @@
                         },
                         "countTriggersBy": "",
                         "evaltype": "0",
-                        "functions": [],
+                        "functions": [
+                          {
+                            "added": true,
+                            "def": {
+                              "category": "Alias",
+                              "defaultParams": [
+                                "/(.*)/",
+                                "$1"
+                              ],
+                              "name": "replaceAlias",
+                              "params": [
+                                {
+                                  "name": "regexp",
+                                  "type": "string"
+                                },
+                                {
+                                  "name": "newAlias",
+                                  "type": "string"
+                                }
+                              ]
+                            },
+                            "params": [
+                              "/(.*): CPU.*/",
+                              "$1"
+                            ],
+                            "text": "replaceAlias(/(.*)/, $1)"
+                          }
+                        ],
                         "group": {
                           "filter": "$GRUPO"
                         },
