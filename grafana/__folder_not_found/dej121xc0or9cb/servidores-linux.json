@@ -488,34 +488,7 @@
                         },
                         "countTriggersBy": "",
                         "evaltype": "0",
-                        "functions": [
-                          {
-                            "added": true,
-                            "def": {
-                              "category": "Alias",
-                              "defaultParams": [
-                                "/(.*)/",
-                                "$1"
-                              ],
-                              "name": "replaceAlias",
-                              "params": [
-                                {
-                                  "name": "regexp",
-                                  "type": "string"
-                                },
-                                {
-                                  "name": "newAlias",
-                                  "type": "string"
-                                }
-                              ]
-                            },
-                            "params": [
-                              "/Partição \\[(.*)\\]:.*/",
-                              "$1"
-                            ],
-                            "text": "replaceAlias(/(.*)/, $1)"
-                          }
-                        ],
+                        "functions": [],
                         "group": {
                           "filter": "$GRUPO"
                         },
@@ -523,7 +496,7 @@
                           "filter": "$VM"
                         },
                         "item": {
-                          "filter": "la"
+                          "filter": "/.*Await - Read.*/"
                         },
                         "itemTag": {
                           "filter": ""
@@ -568,7 +541,7 @@
           "description": "",
           "id": 12,
           "links": [],
-          "title": "LATÊNCIA",
+          "title": "LATÊNCIA DE LEITURA",
           "vizConfig": {
             "kind": "timeseries",
             "spec": {
