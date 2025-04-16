@@ -793,8 +793,8 @@
                 "kind": "ElementReference",
                 "name": "panel-12"
               },
-              "height": 8,
-              "width": 12,
+              "height": 9,
+              "width": 24,
               "x": 0,
               "y": 25
             }
