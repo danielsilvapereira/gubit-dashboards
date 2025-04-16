@@ -807,7 +807,7 @@
     "preload": false,
     "tags": [],
     "timeSettings": {
-      "autoRefresh": "1m",
+      "autoRefresh": "10s",
       "autoRefreshIntervals": [
         "5s",
         "10s",
@@ -894,9 +894,7 @@
         "kind": "QueryVariable",
         "spec": {
           "current": {
-            "text": [
-              "All"
-            ],
+            "text": "All",
             "value": [
               "$__all"
             ]
