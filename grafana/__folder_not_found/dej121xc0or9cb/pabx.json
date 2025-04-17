@@ -924,7 +924,7 @@
                 "kind": "ElementReference",
                 "name": "panel-16"
               },
-              "height": 8,
+              "height": 7,
               "width": 24,
               "x": 0,
               "y": 3
@@ -937,10 +937,10 @@
                 "kind": "ElementReference",
                 "name": "panel-15"
               },
-              "height": 9,
+              "height": 7,
               "width": 24,
               "x": 0,
-              "y": 11
+              "y": 10
             }
           },
           {
@@ -950,10 +950,10 @@
                 "kind": "ElementReference",
                 "name": "panel-13"
               },
-              "height": 8,
+              "height": 6,
               "width": 24,
               "x": 0,
-              "y": 20
+              "y": 17
             }
           },
           {
@@ -963,10 +963,10 @@
                 "kind": "ElementReference",
                 "name": "panel-12"
               },
-              "height": 9,
+              "height": 6,
               "width": 24,
               "x": 0,
-              "y": 28
+              "y": 23
             }
           }
         ]
@@ -977,7 +977,7 @@
     "preload": false,
     "tags": [],
     "timeSettings": {
-      "autoRefresh": "10s",
+      "autoRefresh": "30s",
       "autoRefreshIntervals": [
         "5s",
         "10s",
