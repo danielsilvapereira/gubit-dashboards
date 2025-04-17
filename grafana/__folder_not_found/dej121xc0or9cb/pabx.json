@@ -523,7 +523,7 @@
                 "showPercentChange": false,
                 "text": {
                   "titleSize": 30,
-                  "valueSize": 30
+                  "valueSize": 20
                 },
                 "textMode": "name",
                 "wideLayout": true
