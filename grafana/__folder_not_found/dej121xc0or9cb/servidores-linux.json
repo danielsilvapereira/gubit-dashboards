@@ -1337,6 +1337,21 @@
                       }
                     }
                   }
+                },
+                {
+                  "kind": "sortBy",
+                  "spec": {
+                    "id": "sortBy",
+                    "options": {
+                      "fields": {},
+                      "sort": [
+                        {
+                          "desc": true,
+                          "field": "USO"
+                        }
+                      ]
+                    }
+                  }
                 }
               ]
             }
