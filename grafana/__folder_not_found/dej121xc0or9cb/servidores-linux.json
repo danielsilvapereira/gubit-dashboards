@@ -907,7 +907,7 @@
                     },
                     "insertNulls": false,
                     "lineInterpolation": "linear",
-                    "lineWidth": 1,
+                    "lineWidth": 2,
                     "pointSize": 5,
                     "scaleDistribution": {
                       "type": "linear"
@@ -3129,8 +3129,8 @@
         "kind": "QueryVariable",
         "spec": {
           "current": {
-            "text": "LAI-PABX-84",
-            "value": "LAI-PABX-84"
+            "text": "LAI-PABX-DIGITOTAL",
+            "value": "LAI-PABX-DIGITOTAL"
           },
           "definition": "",
           "hide": "dontHide",
