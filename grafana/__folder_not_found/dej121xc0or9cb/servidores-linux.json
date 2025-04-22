@@ -1221,6 +1221,196 @@
           }
         }
       },
+      "panel-17": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "datasource": {
+                      "type": "alexanderzobnin-zabbix-datasource",
+                      "uid": "fej12ibqp73swe"
+                    },
+                    "hidden": false,
+                    "query": {
+                      "kind": "alexanderzobnin-zabbix-datasource",
+                      "spec": {
+                        "application": {
+                          "filter": ""
+                        },
+                        "countTriggersBy": "",
+                        "evaltype": "0",
+                        "functions": [],
+                        "group": {
+                          "filter": "$GRUPO"
+                        },
+                        "host": {
+                          "filter": "$VM"
+                        },
+                        "item": {
+                          "filter": "/Partição.*: Espaço Utilizado em %/"
+                        },
+                        "itemTag": {
+                          "filter": ""
+                        },
+                        "macro": {
+                          "filter": ""
+                        },
+                        "options": {
+                          "count": false,
+                          "disableDataAlignment": false,
+                          "showDisabledItems": false,
+                          "skipEmptyValues": false,
+                          "useTrends": "default",
+                          "useZabbixValueMapping": false
+                        },
+                        "proxy": {
+                          "filter": ""
+                        },
+                        "queryType": "0",
+                        "resultFormat": "time_series",
+                        "schema": 12,
+                        "table": {
+                          "skipEmptyValues": false
+                        },
+                        "tags": {
+                          "filter": ""
+                        },
+                        "textFilter": "",
+                        "trigger": {
+                          "filter": ""
+                        }
+                      }
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": [
+                {
+                  "kind": "reduce",
+                  "spec": {
+                    "id": "reduce",
+                    "options": {
+                      "labelsToFields": false,
+                      "reducers": [
+                        "lastNotNull"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "kind": "extractFields",
+                  "spec": {
+                    "id": "extractFields",
+                    "options": {
+                      "delimiter": ",",
+                      "format": "regexp",
+                      "regExp": "/Partição \\[(?\u003cfield\u003e.*)\\]/",
+                      "source": "Field"
+                    }
+                  }
+                },
+                {
+                  "kind": "organize",
+                  "spec": {
+                    "id": "organize",
+                    "options": {
+                      "excludeByName": {
+                        "Field": true,
+                        "Last *": false
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Field": 0,
+                        "Last *": 2,
+                        "field": 1
+                      },
+                      "renameByName": {
+                        "Last *": "USO",
+                        "field": "PARTIÇÃO"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "description": "",
+          "id": 17,
+          "links": [],
+          "title": "",
+          "vizConfig": {
+            "kind": "table",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "custom": {
+                    "align": "center",
+                    "cellOptions": {
+                      "type": "auto"
+                    },
+                    "inspect": false
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "dark-orange",
+                        "value": 90
+                      }
+                    ]
+                  },
+                  "unit": "percent"
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "USO"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.cellOptions",
+                        "value": {
+                          "type": "gauge"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "options": {
+                "cellHeight": "sm",
+                "footer": {
+                  "countRows": false,
+                  "fields": "",
+                  "reducer": [
+                    "sum"
+                  ],
+                  "show": false
+                },
+                "showHeader": true
+              },
+              "pluginVersion": "12.0.0"
+            }
+          }
+        }
+      },
       "panel-2": {
         "kind": "Panel",
         "spec": {
@@ -2526,6 +2716,19 @@
                         "height": 4,
                         "width": 5,
                         "x": 10,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-17"
+                        },
+                        "height": 4,
+                        "width": 9,
+                        "x": 15,
                         "y": 0
                       }
                     },
