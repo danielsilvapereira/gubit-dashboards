@@ -1375,6 +1375,7 @@
                     },
                     "inspect": false
                   },
+                  "decimals": 2,
                   "max": 100,
                   "min": 0,
                   "thresholds": {
