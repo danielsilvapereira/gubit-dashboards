@@ -2771,21 +2771,6 @@
             "kind": "TabsLayoutTab",
             "spec": {
               "layout": {
-                "kind": "AutoGridLayout",
-                "spec": {
-                  "columnWidthMode": "standard",
-                  "items": [],
-                  "maxColumnCount": 3,
-                  "rowHeightMode": "standard"
-                }
-              },
-              "title": "SERVIÇOS"
-            }
-          },
-          {
-            "kind": "TabsLayoutTab",
-            "spec": {
-              "layout": {
                 "kind": "GridLayout",
                 "spec": {
                   "items": [
