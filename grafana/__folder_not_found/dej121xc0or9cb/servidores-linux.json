@@ -2323,22 +2323,23 @@
                       "spec": {
                         "collapse": false,
                         "layout": {
-                          "kind": "AutoGridLayout",
+                          "kind": "GridLayout",
                           "spec": {
-                            "columnWidthMode": "standard",
                             "items": [
                               {
-                                "kind": "AutoGridLayoutItem",
+                                "kind": "GridLayoutItem",
                                 "spec": {
                                   "element": {
                                     "kind": "ElementReference",
                                     "name": "panel-13"
-                                  }
+                                  },
+                                  "height": 10,
+                                  "width": 24,
+                                  "x": 0,
+                                  "y": 0
                                 }
                               }
-                            ],
-                            "maxColumnCount": 3,
-                            "rowHeightMode": "standard"
+                            ]
                           }
                         },
                         "title": "VISÃO POR PARTIÇÃO"
