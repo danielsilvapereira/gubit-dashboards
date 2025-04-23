@@ -488,7 +488,34 @@
                         },
                         "countTriggersBy": "",
                         "evaltype": "0",
-                        "functions": [],
+                        "functions": [
+                          {
+                            "added": true,
+                            "def": {
+                              "category": "Alias",
+                              "defaultParams": [
+                                "/(.*)/",
+                                "$1"
+                              ],
+                              "name": "replaceAlias",
+                              "params": [
+                                {
+                                  "name": "regexp",
+                                  "type": "string"
+                                },
+                                {
+                                  "name": "newAlias",
+                                  "type": "string"
+                                }
+                              ]
+                            },
+                            "params": [
+                              "/Disco(.*):.*/",
+                              "$1"
+                            ],
+                            "text": "replaceAlias(/(.*)/, $1)"
+                          }
+                        ],
                         "group": {
                           "filter": "$GRUPO"
                         },
@@ -549,7 +576,7 @@
                 "defaults": {
                   "color": {
                     "fixedColor": "#3dd67e",
-                    "mode": "fixed"
+                    "mode": "palette-classic"
                   },
                   "custom": {
                     "axisBorderShow": true,
@@ -569,13 +596,13 @@
                       "viz": false
                     },
                     "insertNulls": false,
-                    "lineInterpolation": "linear",
+                    "lineInterpolation": "smooth",
                     "lineWidth": 2,
                     "pointSize": 5,
                     "scaleDistribution": {
                       "type": "linear"
                     },
-                    "showPoints": "auto",
+                    "showPoints": "never",
                     "spanNulls": false,
                     "stacking": {
                       "group": "A",
@@ -585,7 +612,6 @@
                       "mode": "off"
                     }
                   },
-                  "decimals": 2,
                   "thresholds": {
                     "mode": "absolute",
                     "steps": [
@@ -594,7 +620,8 @@
                         "value": 0
                       }
                     ]
-                  }
+                  },
+                  "unit": "ms"
                 },
                 "overrides": []
               },
@@ -3041,7 +3068,7 @@
         "1d"
       ],
       "fiscalYearStartMonth": 0,
-      "from": "now-6h",
+      "from": "now-1h",
       "hideTimepicker": false,
       "timezone": "browser",
       "to": "now"
@@ -3052,8 +3079,8 @@
         "kind": "QueryVariable",
         "spec": {
           "current": {
-            "text": "PABX",
-            "value": "PABX"
+            "text": "PULSE",
+            "value": "PULSE"
           },
           "definition": "",
           "hide": "dontHide",
@@ -3114,8 +3141,8 @@
         "kind": "QueryVariable",
         "spec": {
           "current": {
-            "text": "LAI-PABX-DIGITOTAL",
-            "value": "LAI-PABX-DIGITOTAL"
+            "text": "LAI-PULSE-DB-01",
+            "value": "LAI-PULSE-DB-01"
           },
           "definition": "",
           "hide": "dontHide",
