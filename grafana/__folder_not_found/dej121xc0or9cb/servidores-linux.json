@@ -1557,7 +1557,7 @@
           "description": "",
           "id": 18,
           "links": [],
-          "title": "LATÊNCIA DE LEITURA",
+          "title": "I/O",
           "vizConfig": {
             "kind": "timeseries",
             "spec": {
